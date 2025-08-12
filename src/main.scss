@@ -1,0 +1,87 @@
+@import "assets/styles/vars.scss";
+body {
+  //   background-color: $main_color;
+}
+/* #region base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  color: $main_color;
+  line-height: 1.6;
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+.noscroll {
+  overflow: hidden;
+}
+main {
+  flex-grow: 1;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.container2 {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+button {
+  background: none;
+  border: none;
+}
+
+/* #endregion base */
+
+/* #region main */
+// .accent {
+//   background-color: var(--accent-color);
+//   color: var(--light-color);
+//   padding: 3rem 5rem;
+//   cursor: pointer;
+//   border: none;
+//   border-radius: 5px;
+//   font-family: "Jost", sans-serif;
+//   font-weight: 600;
+// }
+.h100 {
+  height: 100%;
+}
+.base_title {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 7rem;
+}
+
+/* #endregion main */
