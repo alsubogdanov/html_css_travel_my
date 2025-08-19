@@ -1,20 +1,24 @@
 import React from "react";
-import "./pages.scss";
+
 function Hero({ content }) {
-  // console.log(content.bgImg);
+  console.log(content);
 
   return (
     <section
-      className="hero"
+      className="hero mb12"
       style={{
+        height: content?.height ? content.height : "60vh",
         backgroundImage: content?.bgImg
           ? `url(${content.bgImg})`
-          : "url(./images/banner-default.jpg)",
-        height: content?.height ? content.height : "60vh",
+          : `url(/img/default-bg.jpg)`,
       }}
     >
-      <h1 className="mt5">{content?.title}</h1>
-      <h1 className="mt5">{content && content.title}</h1>
+      {content && (
+        <div className="hero__wrap d-flex f-column jcc aic h100">
+          <p>{content.text}</p>
+          <h1>{content.title}</h1>
+        </div>
+      )}
     </section>
   );
 }

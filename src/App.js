@@ -2,9 +2,11 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Header from "./components/Header";
 import "./main.scss";
+import "./components/Components.scss";
 import Footer from "./components/Footer";
 import MainPage from "./pages/MainPage";
 import AboutPage from "./pages/AboutPage";
+import SingleArticle from "./components/SingleArticle";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/article/:id" element={<SingleArticle />} />
+
           {/* <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/test" element={<Test />} />
         <Route path="/login" element={<Login />} /> */}

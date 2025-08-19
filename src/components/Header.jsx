@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import search from "../assets/imgs/search.svg";
-import "./Header.scss";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,7 +40,7 @@ function Header() {
         backgroundColor: scrolled ? "rgba(0, 0, 0, 0.8)" : "transparent",
       }}
     >
-      <div className="header__wrap d-flex jcsb">
+      <div className="header__wrap d-flex jcsb g2">
         <div className="logo">
           <img src="/images/main-logo-light.png" alt="" />
         </div>
