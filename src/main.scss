@@ -184,3 +184,64 @@ article {
 .card__img {
   height: 20rem;
 }
+.video-gal{
+	.video-gal__full{
+		height: 76vh;
+		.video-full{
+			border-radius: 2.5rem;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		.icon-play{
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			
+			svg{
+				transition: all 0.3s;
+				&:hover{
+					transform: scale(1.07);
+					transition: all 0.3s;
+				}
+				&:active{
+					transform: scale(0.9);
+					transition: all 0.3s;
+
+				}
+			}
+			
+		}
+		iframe{
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.video-card {
+		display: flex;
+		width: 100%;    
+		cursor: pointer;
+		img{
+			object-fit: cover;   
+			border-radius: 2rem;
+			transition: all 0.3s;
+		}
+		&.active{
+			img{
+				transform: scale(1.09);
+			}
+		}
+		&:hover{
+			img{
+				transform: scale(1.02);
+				transition: all 0.3s;
+			}
+		}
+		   
+		
+	}
+}

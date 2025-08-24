@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import { Link } from "react-router-dom";
 import ArticleCard from "../components/ArticleCards";
+import VideoGallery from "../components/VideoGallery";
+import Form from "../components/Form";
 
 function MainPage() {
   const popularArticles = [
@@ -121,7 +123,7 @@ function MainPage() {
   return (
     <>
       <Hero content={heroContent} />
-      <AboutSection btn={true} />
+      {/* <AboutSection btn={true} />
       {popularArticles && (
         <ul>
           {popularArticles.map((item, ind) => (
@@ -130,7 +132,9 @@ function MainPage() {
             </li>
           ))}
         </ul>
-      )}
+      )} */}
+		<VideoGallery/>
+		<Form/>
     </>
   );
 }
