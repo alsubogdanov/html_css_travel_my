@@ -13,7 +13,7 @@ const Gallery = () => {
     { id: 6, src: "/img/posts06.jpg", category: "Животные" },
   ];
 // Set — это встроенная структура данных в JavaScript, похожая на массив, но в нём каждое значение хранится только один раз (без дублей).
-//Оператор ... (spread) превращает Set обратно в массив:  
+//Оператор ... (spread) превращает Set обратно в массив: git 
 const categories = ["Все", ...new Set(images.map((img) => img.category))];
 
   const [selectedCategory, setSelectedCategory] = useState("Все");

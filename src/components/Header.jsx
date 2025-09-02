@@ -28,6 +28,7 @@ function Header() {
   const nav = [
     { name: "home", url: "/" },
     { name: "about", url: "/about" },
+	  { name: "blog", url: "/blog" },
     { name: "gallery", url: "/gallery" },
     { name: "home", url: "/contact" },
   ];

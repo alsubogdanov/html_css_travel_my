@@ -39,6 +39,7 @@ function VideoGallery() {
 
   return (
 	<section className="video-gal" style={{"backgroundImage": "url('/img/video-bg.jpg')"}}>
+	
 		<div className="container">
 			<div className="video-gal__full mb2">
 			{!isPlaying ? (
@@ -49,17 +50,17 @@ function VideoGallery() {
 					onClick={() => setIsPlaying(true)}
 				>
 					<div className="icon-play">
-					<svg
-						width="70"
-						height="70"
-						viewBox="0 0 512 512"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							fill="white"
-							d="M0 256a256 256 0 1 1 512 0a256 256 0 1 1-512 0m188.3-108.9c-7.6 4.2-12.3 12.3-12.3 20.9v176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"
-						/>
-					</svg>
+						<svg
+							width="70"
+							height="70"
+							viewBox="0 0 512 512"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill="white"
+								d="M0 256a256 256 0 1 1 512 0a256 256 0 1 1-512 0m188.3-108.9c-7.6 4.2-12.3 12.3-12.3 20.9v176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"
+							/>
+						</svg>
 					</div>
 				</div>
 			) : (
@@ -79,8 +80,8 @@ function VideoGallery() {
 				<div
 					key={video.id}
 					onClick={() => {
-					setSelected(video);
-					setIsPlaying(false); // возвращаем превью при смене видео
+						setSelected(video);
+						setIsPlaying(false); // возвращаем превью при смене видео
 					}}
 					className={`video-card ${
 					selected.id === video.id ? "active" : ""
