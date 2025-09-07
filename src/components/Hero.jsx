@@ -1,8 +1,6 @@
 import React from "react";
 
 function Hero({ content }) {
-  console.log(content);
-
   return (
     <section
       className="hero mb12"

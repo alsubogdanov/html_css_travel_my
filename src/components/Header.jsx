@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import search from "../assets/imgs/search.svg";
 
-function Header() {
+function Header({ onSearchClick }) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     // функция, которая обрабатывает событие прокрутки
@@ -28,7 +28,7 @@ function Header() {
   const nav = [
     { name: "home", url: "/" },
     { name: "about", url: "/about" },
-	  { name: "blog", url: "/blog" },
+    { name: "blog", url: "/blog" },
     { name: "gallery", url: "/gallery" },
     { name: "home", url: "/contact" },
   ];
@@ -47,7 +47,7 @@ function Header() {
         </div>
         <nav className="d-flex g2">{navMenu}</nav>
         <div className="search">
-          <img src={`${search}`} alt="" />
+          <img src={`${search}`} alt="" onClick={onSearchClick} />
         </div>
       </div>
     </header>
