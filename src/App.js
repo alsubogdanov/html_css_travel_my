@@ -11,6 +11,7 @@ import AboutPage from "./pages/AboutPage";
 import SingleArticle from "./components/SingleArticle";
 import Blog from "./components/Blog";
 import SearchOverlay from "./components/SearchOverlay";
+import FAQPage from "./components/FAQPage";
 
 function App() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/about" element={<AboutPage />} />
+			 <Route path="/faq" element={<FAQPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/article/:id" element={<SingleArticle />} />
 

@@ -1,4 +1,4 @@
-@import "./assets/styles/vars.scss";
+@import './assets/styles/vars.scss';
 
 // #region main
 *,
@@ -21,7 +21,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
   color: $body-color;
@@ -353,7 +353,7 @@ article {
   button {
     font-size: 1.8rem;
     color: $light;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     padding: 1rem 2rem;
     border-radius: 1.5rem;
@@ -430,6 +430,34 @@ article {
         &:hover {
           color: orange;
         }
+      }
+    }
+  }
+}
+
+.faq {
+  .faq-question {
+    padding: 1rem 3rem;
+  }
+  .faq-item {
+    border: 1px solid gray;
+    &:last-of-type {
+      border-bottom-right-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+    }
+    &:first-of-type {
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+    }
+    .faq-arrow {
+      width: 2rem;
+      height: 2rem;
+      transition: all 0.3s;
+    }
+    &.active {
+      .faq-arrow {
+        transform: rotate(-180deg);
+        transition: all 0.3s;
       }
     }
   }
