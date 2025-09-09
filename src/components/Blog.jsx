@@ -102,8 +102,11 @@ function Blog() {
   const articlesPerPage = 2; // сколько статей на страницу
 
   // вычисляем индекс первой и последней статьи на текущей странице
+  //1*5=5; 5-5=0; -> [0...4];
+  //2*5=10; 10-5=5; -> [5...9];
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  //текущие статьи для отображения на стр
   const currentArticles = filteredArticles.slice(indexOfFirstArticle, indexOfLastArticle);
 
   // сколько всего страниц
@@ -372,12 +375,17 @@ function Blog() {
         {totalPages > 1 && (
           <div className='pagination'>
             <button
+              // Math.max(prev - 1, 1)
+              // // prev - 1 → уменьшаем страницу на 1 (переход "назад").
+              // Math.max(..., 1) → гарантируем, что страница не станет меньше 1.
+              // То есть если мы на 1-й странице и нажмём "Назад", то prev - 1 = 0, но Math.max(0, 1) = 1.
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}>
               Назад
             </button>
 
             {[...Array(totalPages)].map((_, i) => (
+              // _ — просто заглушка, чтобы показать: "значение мне не нужно" (all undefined)
               <button
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}

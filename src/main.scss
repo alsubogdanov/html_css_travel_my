@@ -462,3 +462,25 @@ article {
     }
   }
 }
+.comment-form__inputs input {
+  width: calc(50% - 10px);
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.comment-form__text textarea {
+  height: 183px;
+  width: 100%;
+}
+.btn_main {
+  width: 100%;
+  font-size: 2rem;
+  background-color: orange;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+  border-radius: 3rem;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
