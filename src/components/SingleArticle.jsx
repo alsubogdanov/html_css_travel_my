@@ -1,4 +1,5 @@
 import Comments from './Comments';
+import CommentsWithReplay from './CommentsWithReplay';
 import Hero from './Hero';
 
 function SingleArticle() {
@@ -56,7 +57,8 @@ function SingleArticle() {
           )}
         </div>
       </article>
-      <Comments />
+      {/* <Comments articleId={data.id} /> */}
+      <CommentsWithReplay articleId={data.id} />
     </div>
   );
 }

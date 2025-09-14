@@ -24,6 +24,7 @@ function FAQ() {
   const toggleIndex = (index) => {
     if (openIndexes.includes(index)) {
       // если уже открыт → закрываем
+      //оставь только те элементы, которые не равны текущему индексу.
       setOpenIndexes(openIndexes.filter((i) => i !== index));
     } else {
       // если закрыт → добавляем в массив
