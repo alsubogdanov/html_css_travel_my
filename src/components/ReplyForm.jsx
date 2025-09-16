@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 function ReplyForm({ onSubmit, defaultName = '' }) {
-  const [name, setName] = useState(defaultName);
+  const savedName = localStorage.getItem('commentName');
+  const [name, setName] = useState(savedName || '');
   const [text, setText] = useState('');
 
   const handleSubmit = (e) => {

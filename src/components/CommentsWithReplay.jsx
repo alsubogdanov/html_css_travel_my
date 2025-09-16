@@ -17,7 +17,15 @@ function CommentsWithReplay() {
           date: '2025-09-07',
           text: 'Hi, многое понял.',
           articleId: 1,
-          replies: [],
+          replies: [
+            {
+              name: 'Kate Smith',
+              date: '2025-09-07',
+              text: 'Hi, многое понял.',
+              articleId: 1,
+              replies: [],
+            },
+          ],
         },
       ],
     },
