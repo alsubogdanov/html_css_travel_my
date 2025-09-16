@@ -7,11 +7,18 @@ import "./assets/styles/flex.scss";
 import "./assets/styles/margin_padding.scss";
 import App from "./App";
 
+
+import { MantineProvider } from '@mantine/core';
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+	 <MantineProvider withGlobalStyles withNormalizeCSS>
+	<BrowserRouter>
       <App />
     </BrowserRouter>
+	 </MantineProvider>
+    
   </React.StrictMode>
 );

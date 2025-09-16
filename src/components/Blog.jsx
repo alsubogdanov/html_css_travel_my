@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import ArticlesFilter from './ArticlesFilter';
 import ArticleCard from './ArticleCards';
@@ -345,6 +345,13 @@ function Blog() {
     <div>
       <Hero content={heroContent} />
       <div className='blog-page'>
+        {/* Кнопка "Добавить статью" */}
+        <div className='blog-actions mb2'>
+          <Link to='/add' className='btn btn-primary'>
+            ➕ Добавить статью
+          </Link>
+        </div>
+
         {/* <h2>Результаты поиска: "{searchTerm}"</h2> */}
         {(searchTerm || category) && (
           <h2>

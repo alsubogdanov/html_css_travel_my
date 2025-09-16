@@ -12,6 +12,9 @@ import SingleArticle from "./components/SingleArticle";
 import Blog from "./components/Blog";
 import SearchOverlay from "./components/SearchOverlay";
 import FAQPage from "./components/FAQPage";
+import Gallery from "./components/Gallery";
+import SingleArticleWithEdit from "./components/SingleArticleWithEdit";
+import AddArticle from "./components/AddArticle";
 
 function App() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -20,12 +23,16 @@ function App() {
     <>
       <Header onSearchClick={() => setIsOverlayOpen(true)} />
       <main>
+			
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/about" element={<AboutPage />} />
 			 <Route path="/faq" element={<FAQPage />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/article/:id" element={<SingleArticle />} />
+			 <Route path="/gal" element={<Gallery />} />
+			 <Route path="/add" element={<AddArticle />} />
+			 <Route path="/article/:id" element={<SingleArticleWithEdit />} />
+          {/* <Route path="/article/:id" element={<SingleArticle />} /> */}
 
           {/* <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/test" element={<Test />} />

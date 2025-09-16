@@ -34,6 +34,7 @@ function SingleArticle() {
       },
     ],
   };
+
   return (
     <div>
       <Hero content={heroContent} />

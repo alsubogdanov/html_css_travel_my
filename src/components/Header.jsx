@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import search from '../assets/imgs/search.svg';
 
